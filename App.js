@@ -1,20 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { TextInputComponent, View } from 'react-native';
+import AsyncStorage from './src/screens/AsyncStorage_localstorage/AsyncStorage';
+import JsonData from './src/screens/AsyncStorage_localstorage/Store_Array_Or_JsonData';
+import TextInputWithIcon from './src/screens/Customize_TextInput_With_Icon/TextInputWithIcon';
+import ResponsiveUI from './src/screens/Responsive-UI/Responsive_UI';
 
-export default function App() {
+// import StackNavigator from './src/navigation/StackNavigator/StackNavigator';
+
+// function App() {
+//   return <StackNavigator />;
+// }
+
+function App(){
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View>
+      <AsyncStorage/>
+      <JsonData/>
+      <ResponsiveUI/>
+      <TextInputWithIcon/>
     </View>
-  );
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
+export default App;
